@@ -45,26 +45,16 @@ namespace SVKGroupSender
         }
         private static int AskForInt(string question)
         {
-            int answer = 0;
-            bool isInt = false;
-            do
+            Console.Write(question);
+            Console.ForegroundColor = ConsoleColor.Green;
+            var answer = Console.ReadLine();
+            Console.ResetColor();
+            if (int.TryParse(answer, out var integer))
             {
-                Console.Write(question);
-                try
-                {
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    answer = int.Parse(Console.ReadLine());
-                    Console.ResetColor();
-                    isInt = true;
-                }
-                catch (FormatException)
-                {
-                    Console.ResetColor();
-                    Console.WriteLine("Не ввел значение! Попробуй еще раз!");
-                    Console.ReadKey();
-                }
-            } while (!isInt);
-            return answer;
+                return integer;
+            }
+            Console.WriteLine("Не ввел значение! Попробуй еще раз!");
+            return AskForInt(question);
         }
         private static void ChangeTextToSend()
         {
