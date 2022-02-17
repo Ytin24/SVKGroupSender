@@ -22,7 +22,7 @@ namespace SVKGroupSender
             if (File.Exists(Directory.GetCurrentDirectory() + "//token.txt")) token = File.ReadAllText(Directory.GetCurrentDirectory() + "//token.txt");
             Console.Clear();
             Console.Title = "SetFps SVKGroupSender Modern by Ytin24";
-            Console.WriteLine("SetFps SVKGroupSender - 1.0.1 by Ytin24");
+            Console.WriteLine("SetFps SVKGroupSender - 0.1 by Ytin24");
             Console.WriteLine("1. Начать рассылку.");
             Console.WriteLine("2. Перейти в группу setfps.");
             Console.WriteLine("3. Выход.");
