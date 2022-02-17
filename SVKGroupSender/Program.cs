@@ -81,7 +81,7 @@ namespace SVKGroupSender
         }
         private static void StartGroupSend()
         {
-            //try
+            try
             {
                 if (text != null && token != null)
                 {
@@ -140,7 +140,7 @@ namespace SVKGroupSender
                     Console.WriteLine("Неизвестная ошибка!");
                 }
             }
-           // catch (Exception e) { Console.WriteLine("Error: " + e.Message); }
+            catch (Exception e) { Console.WriteLine("Error: " + e.Message); }
         }
         private static void AddGroupToken()
         {
