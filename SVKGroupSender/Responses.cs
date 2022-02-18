@@ -57,6 +57,7 @@ namespace SVKGroupSender
         [JsonProperty("id")]
         public int Id;
 
+
         [JsonProperty("type")]
         public string Type;
     }
