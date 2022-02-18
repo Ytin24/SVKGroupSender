@@ -99,12 +99,12 @@ namespace SVKGroupSender
                                 
                                 try
                                 {
-                                    if (Group.Response.Items[i].Conversation.WriteSettings.Allowed)
+                                    if (Group.Response.Items[i].Conversation.WriteSettings.Allowed && Group.Response.Items[i].Conversation.Peer.Type != "chat")
                                     {
                                         request = new RestRequest($"https://api.vk.com/method/messages.send?access_token={token}&peer_id={Group.Response.Items[i].Conversation.Peer.Id}&random_id=0&message={text}&v=5.130");
                                         var send = client.GetAsync(request);
                                         Console.WriteLine("Отправил сообщение пользователю {1} \t {2}",Group.Response.Items[i].Conversation.Peer.Id, testint++);
-                                        //Console.WriteLine("тест {0} {1} \t {2}", Group.Response.Items[i].Conversation.WriteSettings.Allowed, Group.Response.Items[i].Conversation.Peer.Id,testint++); //тест отправка*
+                                        //Console.WriteLine("тест {0} {1} \t {2} \t {3}", Group.Response.Items[i].Conversation.WriteSettings.Allowed, Group.Response.Items[i].Conversation.Peer.Id,testint++, Group.Response.Items[i].Conversation.Peer.Type); //тест отправка*
                                         Thread.Sleep(TimeSpan.FromSeconds(0.5));
                                     }
                                 }
