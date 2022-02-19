@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SVKGroupSender
+namespace VKGS
 {
     public class BasicResponse<Type>
     {
