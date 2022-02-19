@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace VKGS
 {
     class StartMenu
     {
         private string[] token;
-        
+
         public StartMenu()
         {
             Menu();
         }
-        
+
         private void Menu()
         {
             if (File.Exists(Directory.GetCurrentDirectory() + "//token.txt")) token = File.ReadAllLines(Directory.GetCurrentDirectory() + "//token.txt");
