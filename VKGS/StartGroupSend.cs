@@ -29,6 +29,8 @@ namespace VKGS
         {
             try
             {
+                throw new Exception("ANAL");
+                throw new JsonReaderException("anal");
                 Console.WriteLine($"Применить тестовую рассылку?\n 1- да | 0 - нет");
                 byte Test = byte.Parse(Console.ReadLine());
 
@@ -115,13 +117,13 @@ namespace VKGS
                     Console.WriteLine("Неизвестная ошибка!");
                 }
             }
-            catch (Exception e) { Console.WriteLine("Error: " + e.Message); }
+            catch (JsonReaderException ex) { Console.WriteLine(ex.Message); }
         }
         private void AddGroupToken()
         {
             if (token != null)
             {
-                if (!File.Exists(Directory.GetCurrentDirectory() + "//token.txt")) File.Create(Directory.GetCurrentDirectory() + "token.txt");
+                if (!File.Exists(Directory.GetCurrentDirectory() + "//token.txt")) File.Create(Directory.GetCurrentDirectory() + "//token.txt");
                 File.WriteAllLines(Directory.GetCurrentDirectory() + "//token.txt", token);
                 GroupSend();
             }
