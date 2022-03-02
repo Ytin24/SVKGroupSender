@@ -77,7 +77,7 @@ namespace VKGS
                     Console.WriteLine($"Токен: {token[n]}");
                     request = new RestRequest($"https://api.vk.com/method/messages.getConversations?access_token={token[n]}&v=5.130&count=1");
                     var responsee = client.GetAsync(request).Result;
-                    var GroupCount = JsonConvert.DeserializeObject<BasicResponse<ItemsResponse<ConversationResponse>>>(responsee.Content);/
+                    var GroupCount = JsonConvert.DeserializeObject<BasicResponse<ItemsResponse<ConversationResponse>>>(responsee.Content);
                     for (int a = 0; a < GroupCount.Response.Count; a += 200)
                     {
                         request = new RestRequest($"https://api.vk.com/method/messages.getConversations?access_token={token[n]}&v=5.130&count=200&offset={a}");
