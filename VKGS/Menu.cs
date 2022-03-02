@@ -49,7 +49,7 @@ namespace VKGS
             Console.ForegroundColor = ConsoleColor.Cyan;
             var answer = Console.ReadLine();
             Console.ResetColor();
-            if (int.TryParse(answer, out var integer))
+            if (int.TryParse(answer, out int integer))
             {
                 return integer;
             }
