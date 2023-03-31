@@ -22,7 +22,7 @@
         public byte[][] photoset()
         {
             PhotoDir();
-            var directory = new DirectoryInfo($"{path}/Photos");
+            var directory = new DirectoryInfo($"{path}/Photo");
             FileInfo[] Photos = directory.GetFiles();
             byte[][] photos = new byte[5][];
             int i = 0;
