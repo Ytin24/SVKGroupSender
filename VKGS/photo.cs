@@ -12,7 +12,7 @@
         {
             photocreate();
             Console.WriteLine($"Поместите фото (До 5 штук) в папку Photo и нажмите Enter");
-            string[] dirs = Directory.GetDirectories(path, "Photos*.");
+            string[] dirs = Directory.GetDirectories(path, "Photo*.");
             foreach (string dir in dirs)
             {
                 System.Diagnostics.Process.Start("explorer.exe", dir);
