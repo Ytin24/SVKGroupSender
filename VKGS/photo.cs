@@ -5,7 +5,7 @@
         private string path = Directory.GetCurrentDirectory();
         private void photocreate()
         {
-            DirectoryInfo dir = new DirectoryInfo($"{path}/Photos");
+            DirectoryInfo dir = new DirectoryInfo($"{path}/Photo");
             dir.Create();
         }
         private void PhotoDir()
